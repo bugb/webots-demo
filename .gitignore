@@ -39,26 +39,27 @@ build/
 *.out
 *.app
 
-# Webots generated controller binaries and caches
-controllers/**/release/
-controllers/**/emcc/
-controllers/**/arm64/
-controllers/**/x86_64/
-controllers/**/build/
-controllers/**/msys*/
-controllers/**/webots_cache/
+# Webots generated controller binaries and caches (match controllers anywhere)
+**/controllers/**/release/
+**/controllers/**/emcc/
+**/controllers/**/arm64/
+**/controllers/**/x86_64/
+**/controllers/**/build/
+**/controllers/**/msys*/
+**/controllers/**/webots_cache/
 **/.webots_cache/
 
 # Ignore controller executables (keep only sources + Makefiles)
-controllers/*/*
-!controllers/*/*.c
-!controllers/*/*.cpp
-!controllers/*/*.py
-!controllers/*/Makefile
+**/controllers/*/*
+!**/controllers/*/*.c
+!**/controllers/*/*.cpp
+!**/controllers/*/*.py
+!**/controllers/*/Makefile
+!**/controllers/*/README.md
 
-# Explicitly ignore Webots controller symlinks/binaries
-controllers/**/controller
-controllers/**/controller.exe
+# Explicit controller symlinks/binaries Webots may create
+**/controllers/**/controller
+**/controllers/**/controller.exe
 
 # Logs and diagnostics
 *.log
