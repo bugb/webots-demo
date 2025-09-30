@@ -1,0 +1,57 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editor folders
+.vscode/
+.idea/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# MATLAB generated artifacts
+*.mex*
+*.slxc
+*.sldd
+
+# Build directories
+build/
+**/build/
+**/dist/
+**/tmp/
+.cache/
+
+# Compiled objects and libraries
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.d
+*.exe
+*.out
+*.app
+
+# Webots generated controller binaries and caches
+controllers/**/release/
+controllers/**/emcc/
+controllers/**/arm64/
+controllers/**/x86_64/
+controllers/**/build/
+controllers/**/msys*/
+controllers/**/webots_cache/
+**/.webots_cache/
+
+# Logs and diagnostics
+*.log
+*.dmp
+
+# Webots project metadata (user-specific)
+*.wbproj
