@@ -49,9 +49,26 @@ controllers/**/msys*/
 controllers/**/webots_cache/
 **/.webots_cache/
 
+# Ignore controller executables (keep only sources + Makefiles)
+controllers/*/*
+!controllers/*/*.c
+!controllers/*/*.cpp
+!controllers/*/*.py
+!controllers/*/Makefile
+
+# Explicitly ignore Webots controller symlinks/binaries
+controllers/**/controller
+controllers/**/controller.exe
+
 # Logs and diagnostics
 *.log
 *.dmp
 
 # Webots project metadata (user-specific)
 *.wbproj
+
+# Webots backup world files
+worlds/*.bak.wbt
+
+# Webots runtime record files
+*.wbr
