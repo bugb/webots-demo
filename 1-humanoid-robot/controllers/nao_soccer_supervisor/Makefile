@@ -17,9 +17,10 @@
 # You may add some variable definitions hereafter to customize the build process
 # See documentation in $(WEBOTS_HOME_PATH)/resources/Makefile.include
 
-ifeq ($(OS),Windows_NT)
-# on Windows, need to link with WinSock2
-LIBRARIES=-lWs2_32
+ifeq ($(findstring MINGW,$(shell uname -s)),MINGW)
+  LIBRARIES += -lws2_32
+  # If you ever still see winsock1 symbols on very old code: also add
+  # LIBRARIES += -lwsock32
 endif
 
 # Do not modify the following: this includes Webots global Makefile.include
